@@ -50,3 +50,4 @@ while (y <= 100) {
 }
 
 console.log(numbers);
+
