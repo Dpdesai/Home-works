@@ -10,9 +10,10 @@ let user = {
 }
 
 // B. Update the user
-user['name'] = 'jack';
-user['email'] = 'xyz@gmail.com';
-user['age'] = user.age + 1;
+user.name = 'jack';
+user.email = 'xyz@gmail.com';
+user.age = user.age + 1;
+// console.log(user);
 
 //C. Adding keys and values
 user['location'] = 'NJ';
