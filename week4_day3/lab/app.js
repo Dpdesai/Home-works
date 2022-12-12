@@ -146,3 +146,87 @@ fibonacci(5);
 ////////////////////////////////
 // Checkerboard
 ////////////////////////////////
+
+
+let height = 4;
+let width = 5;
+let board = "";
+for (let i = 0; i < height; i++) {
+    for (let j = 0; j < width; j++) {
+        if (j == width - 1) {
+            board += "\n";
+        } else if ((j + i) % 2 == 0) {
+            board += "*";
+        }
+        else {
+            board += "#";
+        }
+    }
+}
+
+console.log(board);
+
+
+
+////////////////////////////////
+// TwoDArray
+////////////////////////////////
+let newArray = new Array(4);
+for (let i = 0; i < newArray.length; i++) {
+    newArray[i] = new Array(4);
+}
+// console.log(newArray);
+
+
+////////////////////////////////
+// Return of the Closets
+////////////////////////////////
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "Per Scholas hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+];
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+    [
+        // These are Thom's shirts
+        "grey button-up",
+        "dark grey button-up",
+        "light blue button-up",
+        "blue button-up",
+    ], [
+        // These are Thom's pants
+        "grey jeans",
+        "jeans",
+        "PJs"
+    ], [
+        // Thom's accessories
+        "wool mittens",
+        "wool scarf",
+        "raybans"
+    ]
+];
+
+const kristynsShoe = kristynsCloset.shift();
+thomsCloset[2].push(kristynsShoe);
+// console.log(kristynsCloset);
+// console.log(thomsCloset);
+
+for (let i = 0; i < 3; i++) {
+    // console.log("we'll be wearing " + kristynsCloset[i] + " ," + thomsCloset[i][i] + ".");
+}
+
+for (let i = 0; i < kristynsCloset.length; i++) {
+    // console.log("WHIRR: Now washing " + kristynsCloset[i]);
+}
+
+for (let i = 0; i < thomsCloset.length; i++) {
+    for (let j = 0; j < thomsCloset[i].length; j++) {
+        // console.log(thomsCloset[i][j]);
+    }
+}
