@@ -148,12 +148,12 @@ fibonacci(5);
 ////////////////////////////////
 
 
-let height = 4;
-let width = 5;
+let row = 4;
+let col = 5;
 let board = "";
-for (let i = 0; i < height; i++) {
-    for (let j = 0; j < width; j++) {
-        if (j == width - 1) {
+for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+        if (j == col - 1) {
             board += "\n";
         } else if ((j + i) % 2 == 0) {
             board += "*";
@@ -164,7 +164,7 @@ for (let i = 0; i < height; i++) {
     }
 }
 
-console.log(board);
+// console.log(board);
 
 
 
@@ -227,6 +227,6 @@ for (let i = 0; i < kristynsCloset.length; i++) {
 
 for (let i = 0; i < thomsCloset.length; i++) {
     for (let j = 0; j < thomsCloset[i].length; j++) {
-        // console.log(thomsCloset[i][j]);
+        console.log(thomsCloset[i][j]);
     }
 }
