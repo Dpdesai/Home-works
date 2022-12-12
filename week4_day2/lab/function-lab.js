@@ -37,6 +37,16 @@ function isVowel(str) {
 // console.log(isVowel('a'));
 
 
+function isVowel(str) {
+    return ['a', 'e', 'i', 'o', 'u'].includes(str);
+    // let vowels = ['a', 'e', 'i', 'o', 'u'];
+    // if (vowels.includes(str)) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+}
+// console.log(isVowel('a'));
 
 //E. getTwoLengths
 function getTwoLengths(str1, str2) {
