@@ -82,15 +82,15 @@ for(let i = 0; i < 5; i++) {
     timmy.exercise();
 }
 
-console.log(timmy);
+// console.log(timmy);
 
 // Increasing Timmy's age to 9
 timmy.age = 9;
-console.log(timmy);
+// console.log(timmy);
 const gus = new Hamster('Gus');
 gus.owner = 'Timmy';
 timmy.buyHamster(gus);
-console.log(timmy);
+// console.log(timmy);
 
 
 // Increasing Timmy's age to 15
@@ -102,7 +102,7 @@ for(let i = 0; i < 2; i++) {
 for(let i = 0; i < 2; i++) {
     timmy.exercise();
 }
-console.log(timmy);
+// console.log(timmy);
 
 
 
@@ -125,9 +125,9 @@ const dinner1 = new Chef().newDinner('appetizer1', 'entree1', 'dessert1');
 const dinner2 = new Chef().newDinner('appetizer2', 'entree2', 'dessert2');
 const dinner3 = new Chef().newDinner('appetizer3', 'entree3', 'dessert3');
 
-console.log(dinner1);
-console.log(dinner2);
-console.log(dinner3);
+// console.log(dinner1);
+// console.log(dinner2);
+// console.log(dinner3);
 
 
 // I. Variables & Datatypes
@@ -196,9 +196,9 @@ console.log(48 == '48');
 let animal = 'dog'; // 'cow'
 
 if (animal === 'cow') {
-    console.log("mooooo");
+    // console.log("mooooo");
 } else {
-    console.log("Hey! You're not a cow.");
+    // console.log("Hey! You're not a cow.");
 }
 
 
@@ -208,9 +208,9 @@ if (animal === 'cow') {
 let personAge = 14; // 20
 
 if (personAge >= 16) {
-    console.log("Here are the keys!");
+    // console.log("Here are the keys!");
 } else {
-    console.log("Sorry, you're too young.");
+    // console.log("Sorry, you're too young.");
 }
 
 // A. The basics
@@ -260,14 +260,14 @@ for(let i = 1; i <= 10; i++) {
     bank_account = bank_account + i;
 }
 
-console.log(bank_account);
+// console.log(bank_account);
 
 bank_account = 0;
 for(let i = 1; i <= 100; i++) {
     bank_account = bank_account + i * 2;
 }
 
-console.log(bank_account);
+// console.log(bank_account);
 
 
 // III. Arrays & Control flow
@@ -366,9 +366,9 @@ kristynsCloset[5] = 'stained knit hat';
 // console.log(thomsCloset[0][0]);
 // console.log(thomsCloset[1][0]);
 // console.log(thomsCloset[2][0]);
-console.log('Thom is looking fierce in a ' + thomsCloset[0][0] + ', ' + thomsCloset[1][1] + ' and ' + thomsCloset[2][1]);
+// console.log('Thom is looking fierce in a ' + thomsCloset[0][0] + ', ' + thomsCloset[1][1] + ' and ' + thomsCloset[2][1]);
 thomsCloset[1][2] = 'Footie Pajamas';
-console.log(thomsCloset);
+// console.log(thomsCloset);
 
 //IV. Functions
 
@@ -480,7 +480,7 @@ function printLongestWord(array) {
     }
     return maxValue;
 }
-console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+// console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
 
 
 //Objects
