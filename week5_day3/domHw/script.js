@@ -51,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   divEl.classList.add('blog-post', 'purple');
   let h2 = document.createElement('div');
   h2.textContent = 'New York';
+  h2.style.color = 'white';
+  h2.style.fontSize = '2em';
   divEl.appendChild(h2);
   let p = document.createElement('p');
   p.textContent = 'I RACED NEW YORK CITY WITH MY CAR!';
@@ -69,11 +71,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // Part 9
   const blogPosts = document.getElementsByClassName('blog-post');
   for (let i of blogPosts) {
-    i.addEventListener('mouseenter', (e) => {
-      i.classList.toggle('red');
+    i.addEventListener('mouseover', (e) => {
+      i.classList.add('red');
+      i.classList.remove('purple');
+    });
+    i.addEventListener('mouseout', (e) => {
+      i.classList.remove('red');
+      i.classList.add('purple');
     });
   }
   // for (let i of blogPosts) {
+  //   i.addEventListener('mouseenter', (e) => {
+  //     i.classList.toggle('red');
+  //   });
   //   i.addEventListener('mouseout', (e) => {
   //     i.classList.toggle('purple');
   //   });
