@@ -47,111 +47,75 @@ for (let i in menuLinks) {
     a.setAttribute('href', menuLinks[i].href);
     a.textContent = menuLinks[i].text;
     topMenuEl.appendChild(a);
-
-    // if (menuLinks[i].text !== 'about') {
-    //     a.setAttribute('link', menuLinks[i].subLinks);
-    // }
 }
 
 let topMenuLinks = document.querySelectorAll('#top-menu a');
 
-// topMenuEl.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     if (e.target.tagName == 'a' || e.target.tagName == 'A') {
-//         console.log(e.target.text);
-//     } else {
-//         return false;
-//     }
-
-//     if (e.target.classList.contains('active')) {
-//         e.target.classList.remove('active');
-//         showingSubMenu = false;
-//         subMenuEl.style.top = '0';
-//         return;
-//     }
-
-//     for (let i in topMenuLinks) {
-//         e.target.classList.remove('active');
-//     }
-
-//     e.target.classList.add('active');
-
-//     menuLinks.forEach(obj => {
-//         if (obj.hasOwnProperty('subLinks')) {
-//             showingSubMenu = true;
-//         } else {
-//             showingSubMenu = false;
-//         }
-//         if (menuLinks[i].text !== 'about') {
-//             obj.subLinks.setAttribute('link', menuLinks[i].subLinks);
-//         }
-//     })
-// });
-
-topMenuEl.addEventListener("click", function (e) {
+topMenuEl.addEventListener('click', function (e) {
     e.preventDefault();
 
     let text = e.target.textContent;
     if (
-        text === "about" ||
-        text === "catalog" ||
-        text === "orders" ||
-        text === "account"
+        text === 'about' ||
+        text === 'catalog' ||
+        text === 'orders' ||
+        text === 'account'
     ) {
         // console.log(text);
     } else {
         return;
     }
 
-    if (e.target.classList.contains("active")) {
-        e.target.classList.remove("active");
+    if (e.target.classList.contains('active')) {
+        e.target.classList.remove('active');
         showingSubMenu = false;
-        subMenuEl.style.top = "0";
+        subMenuEl.style.top = '0';
         return;
     }
 
     for (let i of topMenuLinks) {
-        i.classList.remove("active");
+        i.classList.remove('active');
     }
-    e.target.classList.add("active");
 
-    if (text === "about") {
+    e.target.classList.add('active');
+
+    if (text === 'about') {
         mainEl.innerHTML = `<h1>${text}</h1>`;
     }
 
     menuLinks.forEach((obj) => {
-        if (obj.hasOwnProperty("subLinks")) {
+        if (obj.hasOwnProperty('subLinks')) {
             showingSubMenu = true;
             if (obj.text === text) {
                 let linkArr = [];
                 obj.subLinks.forEach((el) => {
-                    let link = document.createElement("a");
-                    link.setAttribute("href", el.href);
+                    let link = document.createElement('a');
+                    link.setAttribute('href', el.href);
                     link.textContent = el.text;
                     linkArr.push(link);
                 });
-                subMenuEl.innerHTML = "";
+                subMenuEl.innerHTML = '';
                 subMenuEl.append(...linkArr);
-                subMenuEl.style.top = "100%";
+                subMenuEl.style.top = '100%';
             }
         } else {
             showingSubMenu = false;
-            subMenuEl.style.top = "0";
+            subMenuEl.style.top = '0';
         }
     });
 });
 
-subMenuEl.addEventListener("click", function (e) {
+subMenuEl.addEventListener('click', function (e) {
     e.preventDefault();
-    if (e.target.tagName === "A") {
+    if (e.target.tagName === 'A') {
         console.log(e.target.textContent);
     } else {
         return;
     }
     showingSubMenu = false;
-    subMenuEl.style.top = "0";
+    subMenuEl.style.top = '0';
     for (let i of topMenuLinks) {
-        i.classList.remove("active");
+        i.classList.remove('active');
     }
 
     mainEl.innerHTML = `<h1>${e.target.textContent}</h1>`;

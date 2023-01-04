@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // Part 7
   let divEl = document.createElement('div');
   divEl.classList.add('blog-post', 'purple');
-  let h2 = document.createElement('div');
+  let h2 = document.createElement('h2');
   h2.textContent = 'New York';
   h2.style.color = 'white';
   h2.style.fontSize = '2em';
