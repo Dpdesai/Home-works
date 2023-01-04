@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   bodyColor.style.backgroundColor = '#cdcdcd';
 
   // Part 3
-  let lastItem = document.querySelector('li:last-child');
+  let lastItem = document.querySelector('#favorite-things li:last-child');
   lastItem.remove();
 
   // Part 4
