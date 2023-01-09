@@ -79,15 +79,15 @@ const strA = (element) => element.includes('a');
 // Hungry for More
 
 // Reduce
-const initialValue = 0;
+const sum = 0;
 const total = nums.reduce(
-  (accumulator, currentValue) => accumulator + currentValue,
-  initialValue
+  (firstNum, secondNum) => firstNum + secondNum,
+  sum
 );
 // console.log(total);
 
 const finalStr = panagram.reduce(
-  (accumulator, currentValue) => accumulator + ' ' + currentValue
+  (firstStr, secondStr) => firstStr + ' ' + secondStr
 );
 // console.log(finalStr);
 
@@ -110,17 +110,6 @@ for (let i = 0; i < panagram.length; i++) {
         }
     }
 }
-// let wordAscen = panagram.sort(function(a,b){
-//     return (a > b ? 1 : -1)
-// })
-// console.log("Word Ascending order is ", wordAscen);
-// Sort the words in descending order
 
-console.log(panagram.sort((a,b) => a > b ? 1 : -1)); // ascending 
-console.log(panagram.sort((a,b) => a < b ? 1 : -1)); // descending 
-
-
-// let wordDesc = panagram.sort(function(a,b){
-//     return (a < b ? 1 : -1)
-// })
-// console.log("Word Descending order is ", wordDesc);
+// console.log(panagram.sort((a,b) => a > b ? 1 : -1)); // ascending 
+// console.log(panagram.sort((a,b) => a < b ? 1 : -1)); // descending 
