@@ -68,14 +68,59 @@ const mapPanagram = panagram.map(x => x.toUpperCase());
 
 
 // Some
-nums.forEach(element => {
-    if(element % 7 === 0) {
-        // console.log(element);
-    }
-});
+const eleSeven = (element) => element % 7 === 0;
+// console.log(nums.some(eleSeven));
 
-panagram.forEach(element => {
-    if(element.includes('a')) {
-        // console.log(element);
+const strA = (element) => element.includes('a');
+// console.log(panagram.some(strA));
+
+
+
+// Hungry for More
+
+// Reduce
+const initialValue = 0;
+const total = nums.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue
+);
+// console.log(total);
+
+const finalStr = panagram.reduce(
+  (accumulator, currentValue) => accumulator + ' ' + currentValue
+);
+// console.log(finalStr);
+
+
+
+// Sort
+
+// console.log(nums.sort());
+// console.log(panagram.sort());
+
+// console.log(nums.sort((a,b) => a - b)); // ascending 
+// console.log(nums.sort((a,b) => b - a)); // descending 
+
+for (let i = 0; i < panagram.length; i++) {
+    for (let j = 0; j < panagram.length; j++) {        
+        let temp = panagram[i].toLowerCase();
+        if (panagram[i] < panagram[j]) {
+            panagram[i] = panagram[j];
+            panagram[j] = temp;
+        }
     }
-});
+}
+// let wordAscen = panagram.sort(function(a,b){
+//     return (a > b ? 1 : -1)
+// })
+// console.log("Word Ascending order is ", wordAscen);
+// Sort the words in descending order
+
+console.log(panagram.sort((a,b) => a > b ? 1 : -1)); // ascending 
+console.log(panagram.sort((a,b) => a < b ? 1 : -1)); // descending 
+
+
+// let wordDesc = panagram.sort(function(a,b){
+//     return (a < b ? 1 : -1)
+// })
+// console.log("Word Descending order is ", wordDesc);
